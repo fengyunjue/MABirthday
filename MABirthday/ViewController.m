@@ -120,14 +120,6 @@ static int idx = 0;
         [self.time invalidate];
         [[MAPlayer sharedMAPlayer]pause];
         self.isStop = YES;
-        
-        UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"love.JPG"]];
-        imageView.frame = CGRectMake(0, idx * 50 + 20, 419, 561);
-        self.scrollView.contentSize = CGSizeMake(kScreenSize.width, CGRectGetMaxY(imageView.frame));
-        CGFloat offsetY = CGRectGetMaxY(imageView.frame) - 561;
-        [self.scrollView setContentOffset:CGPointMake(0, offsetY)];
-        [self.scrollView addSubview:imageView];
-        
         return;
     }
     NSString *text = self.textArray[idx];
